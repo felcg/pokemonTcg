@@ -52,7 +52,7 @@ const Input: React.FC = () => {
         onClick={handleSubmit}
         disabled={disableSubmit}
       >
-        Search
+        Buscar
       </button>
     </div>
   );

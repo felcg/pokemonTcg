@@ -1,12 +1,16 @@
 @import "@presentation/styles/mediaQueries.scss";
+@import "@presentation/styles/colors.scss";
 
 .inputWrapper {
+  padding: 1rem;
   
   &__input {
     padding: 0.5rem;
     margin-right: 1rem;
     min-width: 300px;
     border-radius: 5px;
+    border: 2px solid $black;
+    border-radius: 20px
   }
   
   &__button {
@@ -16,8 +20,17 @@
     min-width: 60px;
     margin-right: 1rem;
     cursor: pointer;
+    background-color: $primary;
+    color: $white;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    min-width: 120px;
+    border-radius: 20px;
+    border: 1px solid $primary;
 
     &:disabled {
+      background-color: $gray;
+      border: 1px solid $gray;
       cursor: not-allowed
     }
   }
@@ -28,6 +41,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    &__input, &__button {
+      margin: 0;
+      
+    }
   }
 }
 
