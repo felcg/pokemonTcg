@@ -1,5 +1,24 @@
+import CardsProvider, { CardsContext } from "@presentation/context";
+import { useContext } from "react";
+import Input from "./components/Input";
+
 function Home() {
-  return <div>Home</div>;
+  const { cards } = useContext(CardsContext);
+
+  return (
+    <div>
+      <Input />
+      {cards?.map((card) => {
+        return <div>{card.name}</div>;
+      })}
+    </div>
+  );
 }
 
-export default Home;
+const HomeWrapper = () => (
+  <CardsProvider>
+    <Home />
+  </CardsProvider>
+);
+
+export default HomeWrapper;
