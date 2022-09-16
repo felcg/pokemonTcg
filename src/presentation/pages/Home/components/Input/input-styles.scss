@@ -1,0 +1,33 @@
+@import "@presentation/styles/mediaQueries.scss";
+
+.inputWrapper {
+  
+  &__input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    min-width: 300px;
+    border-radius: 5px;
+  }
+  
+  &__button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    min-width: 60px;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
