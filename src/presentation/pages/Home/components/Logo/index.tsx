@@ -1,5 +1,5 @@
 import React from "react";
-import "./logo-styles.scss";
+import "./styles.scss";
 import gengarImg from "./gengar.png";
 
 const Logo: React.FC = () => {

@@ -3,7 +3,7 @@ import { CardsContext } from "@presentation/context/CardsContext";
 import { PokeCardService } from "@application/usecases";
 import { AxiosHttpClient } from "@infra/http";
 import { pokemonApi } from "@infra/protocols/pokemonTgcApi";
-import "./input-styles.scss";
+import "./styles.scss";
 
 const Input: React.FC = () => {
   const [input, setInput] = useState("");
@@ -23,6 +23,8 @@ const Input: React.FC = () => {
       const cards = await cardsService.getCards({
         params: {
           q: `name:${input}`,
+          page: 1,
+          pageSize: 5,
         },
       });
 
