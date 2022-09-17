@@ -1,0 +1,43 @@
+.pokeCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background-position-y: -35px;
+  height: 150px;
+
+  &__image {
+    transform: scale(1.5);
+  }
+
+  &__infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    padding: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    &--name, &--id {
+      padding: 0.3rem;
+      border-radius: 20px;
+    }
+    &--types {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &--pill {
+      padding: 0.3rem;
+      border-radius: 20px;
+      width: fit-content;
+    }
+  } 
+}
