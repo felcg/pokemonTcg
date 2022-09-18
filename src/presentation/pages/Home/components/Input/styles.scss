@@ -3,6 +3,8 @@
 
 .inputWrapper {
   padding: 1rem;
+  display: flex;
+  justify-content: center;
   
   &__input {
     padding: 0.5rem;

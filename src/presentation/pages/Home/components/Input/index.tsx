@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CardsContext } from "@presentation/context/CardsContext";
 import { PokeCardService } from "@application/usecases";
 import { AxiosHttpClient } from "@infra/http";
@@ -19,7 +19,8 @@ const Input: React.FC<InputProps> = (props) => {
     setInput(typedValue);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: { preventDefault: () => void }) => {
+    event.preventDefault();
     try {
       setLoading(true);
       const cards = await cardsService.getCards({
@@ -42,24 +43,26 @@ const Input: React.FC<InputProps> = (props) => {
 
   return (
     <div className="inputWrapper" data-testid={`input-wrapper`}>
-      <input
-        className="inputWrapper__input"
-        placeholder="Nome do Pokémon"
-        data-testid={"query-input"}
-        onFocus={(e) => {
-          e.target.readOnly = false;
-        }}
-        onChange={(e) => handleChange(e)}
-        value={input}
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          className="inputWrapper__input"
+          placeholder="Nome do Pokémon"
+          data-testid={"query-input"}
+          onFocus={(e) => {
+            e.target.readOnly = false;
+          }}
+          onChange={(e) => handleChange(e)}
+          value={input}
+        />
 
-      <button
-        className="inputWrapper__button"
-        onClick={handleSubmit}
-        disabled={disableSubmit}
-      >
-        Buscar
-      </button>
+        <button
+          className="inputWrapper__button"
+          onClick={handleSubmit}
+          disabled={disableSubmit}
+        >
+          Buscar
+        </button>
+      </form>
     </div>
   );
 };
