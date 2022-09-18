@@ -1,0 +1,54 @@
+@import "@presentation/styles/colors.scss";
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  &__button {
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    border: none;
+    margin: 2rem;
+    background: $black;
+    color: $white;
+  }
+  
+  &__infoContainer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__attacks {
+    .cardDetails__pill {
+     border: 1px solid $gray;
+    }  
+  }
+
+  &__pill {
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+  }
+
+  &__nameAndid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__types, &__resistances, &__weaknesses, &__attacks {
+    display: flex;
+    padding: 0 1rem;
+    gap: .5rem;
+    align-items: center;
+  }
+}
