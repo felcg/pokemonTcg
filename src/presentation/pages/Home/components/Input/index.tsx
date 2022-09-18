@@ -3,11 +3,13 @@ import { CardsContext } from "@presentation/context/CardsContext";
 import { PokeCardService } from "@application/usecases";
 import { AxiosHttpClient } from "@infra/http";
 import { pokemonApi } from "@infra/protocols/pokemonTgcApi";
+import { InputProps } from "@presentation/protocols";
 import "./styles.scss";
 
-const Input: React.FC = () => {
+const Input: React.FC<InputProps> = (props) => {
   const [input, setInput] = useState("");
   const { setCards, setLoading } = useContext(CardsContext);
+  const { swiper } = props;
   const httpClient = new AxiosHttpClient();
   const cardsService = new PokeCardService(pokemonApi.cards, httpClient);
   const disableSubmit = input.length <= 0;
@@ -24,11 +26,13 @@ const Input: React.FC = () => {
         params: {
           q: `name:${input}`,
           page: 1,
-          pageSize: 5,
+          pageSize: 250,
+          orderBy: "name",
         },
       });
 
       setCards(cards);
+      swiper.slideTo(0);
     } catch (error) {
       console.log(error);
     } finally {
