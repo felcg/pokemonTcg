@@ -37,6 +37,7 @@ const CardsDetails: React.FC<CardDetailsProps> = () => {
           {card?.types?.map((type) => {
             return (
               <p
+                key={type}
                 className="cardDetails__pill"
                 style={{
                   background: getBackground(type),
@@ -54,6 +55,7 @@ const CardsDetails: React.FC<CardDetailsProps> = () => {
             card.resistances.map((resistance) => {
               return (
                 <p
+                  key={resistance.type}
                   className="cardDetails__pill"
                   style={{
                     background: getBackground(resistance.type),
@@ -74,6 +76,7 @@ const CardsDetails: React.FC<CardDetailsProps> = () => {
             card.weaknesses.map((weakness) => {
               return (
                 <p
+                  key={weakness.type}
                   className="cardDetails__pill"
                   style={{
                     background: getBackground(weakness.type),
@@ -92,7 +95,11 @@ const CardsDetails: React.FC<CardDetailsProps> = () => {
         <div className="cardDetails__attacks">
           <strong>Attacks:</strong>
           {card?.attacks?.map((attack) => {
-            return <p className="cardDetails__pill">{attack.name}</p>;
+            return (
+              <p key={attack.name} className="cardDetails__pill">
+                {attack.name}
+              </p>
+            );
           })}
         </div>
       </div>

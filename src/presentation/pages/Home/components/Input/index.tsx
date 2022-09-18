@@ -43,7 +43,7 @@ const Input: React.FC<InputProps> = (props) => {
 
   return (
     <div className="inputWrapper" data-testid={`input-wrapper`}>
-      <form onSubmit={handleSubmit}>
+      <form className="inputWrapper__form" onSubmit={handleSubmit}>
         <input
           className="inputWrapper__input"
           placeholder="Nome do Pokémon"
