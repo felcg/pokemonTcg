@@ -73,25 +73,25 @@ export type PokeCard = {
   name: string
   supertype: string
   subtypes: string[]
-  level: string
-  hp: string
-  types: string[]
+  level?: string
+  hp?: string
+  types?: string[]
   evolvesFrom?: string
   evolvesTo?: string[]
   rules?: string[]
   AncientTrait?: AncientTrait
   abilities?: Abillity[]
-  attacks: Attack[]
-  weaknesses: WeaknessOrResistances[]
-  resistances: WeaknessOrResistances[]
-  retreatCost: string[]
-  convertedRetreatCost: number
+  attacks?: Attack[]
+  weaknesses?: WeaknessOrResistances[]
+  resistances?: WeaknessOrResistances[]
+  retreatCost?: string[]
+  convertedRetreatCost?: number
   set: Set
   number: string
   artist: string
   rarity: string
   flavorText?: string
-  nationalPokedexNumbers: number[]
+  nationalPokedexNumbers?: number[]
   legalities: Legality
   regulationMark?: string
   images: Image

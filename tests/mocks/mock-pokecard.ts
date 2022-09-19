@@ -209,3 +209,69 @@ export const PokeCardMockTwoTypes: PokeCard = {
     }
   }
 }
+
+export const PokeCardMockNoType: PokeCard = {
+  "id": "xy4-95",
+  "name": "Gengar Spirit Link",
+  "supertype": "Trainer",
+  "subtypes": [
+    "Pokémon Tool"
+  ],
+  "rules": [
+    "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it.",
+    "Your turn does not end if the Pokémon this card is attached to becomes M Gengar-EX.",
+    "You may play as many Item cards as you like during your turn (before your attack)."
+  ],
+  "set": {
+    "id": "xy4",
+    "name": "Phantom Forces",
+    "series": "XY",
+    "printedTotal": 119,
+    "total": 124,
+    "legalities": {
+      "unlimited": "Legal",
+      "expanded": "Legal"
+    },
+    "ptcgoCode": "PHF",
+    "releaseDate": "2014/11/05",
+    "updatedAt": "2020/08/14 09:35:00",
+    "images": {
+      "symbol": "https://images.pokemontcg.io/xy4/symbol.png",
+      "logo": "https://images.pokemontcg.io/xy4/logo.png"
+    }
+  },
+  "number": "95",
+  "artist": "5ban Graphics",
+  "rarity": "Uncommon",
+  "legalities": {
+    "unlimited": "Legal",
+    "expanded": "Legal"
+  },
+  "images": {
+    "small": "https://images.pokemontcg.io/xy4/95.png",
+    "large": "https://images.pokemontcg.io/xy4/95_hires.png"
+  },
+  "tcgplayer": {
+    "url": "https://prices.pokemontcg.io/tcgplayer/xy4-95",
+    "updatedAt": "2022/09/16",
+  },
+  "cardmarket": {
+    "url": "https://prices.pokemontcg.io/cardmarket/xy4-95",
+    "updatedAt": "2022/09/16",
+    "prices": {
+      "averageSellPrice": 0.19,
+      "lowPrice": 0.02,
+      "trendPrice": 0.18,
+      "reverseHoloSell": 1.99,
+      "reverseHoloLow": 0.4,
+      "reverseHoloTrend": 1.25,
+      "lowPriceExPlus": 0.02,
+      "avg1": 0.45,
+      "avg7": 0.18,
+      "avg30": 0.18,
+      "reverseHoloAvg1": 1.48,
+      "reverseHoloAvg7": 0.81,
+      "reverseHoloAvg30": 0.86
+    }
+  }
+}
