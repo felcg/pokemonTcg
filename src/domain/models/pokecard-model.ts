@@ -12,7 +12,7 @@ type Abillity = {
   type: string
 }
 
-type Attack = {
+export type Attack = {
   cost: [string]
   name: string
   text: string
