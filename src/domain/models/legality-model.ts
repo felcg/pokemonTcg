@@ -1,5 +1,5 @@
 export type Legality = {
-  standard: string
-  expanded: string
-  unlimited: string
+  standard?: string
+  expanded?: string
+  unlimited?: string
 }

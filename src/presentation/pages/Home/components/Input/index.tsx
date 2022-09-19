@@ -56,6 +56,7 @@ const Input: React.FC<InputProps> = (props) => {
         />
 
         <button
+          type="button"
           className="inputWrapper__button"
           onClick={handleSubmit}
           disabled={disableSubmit}

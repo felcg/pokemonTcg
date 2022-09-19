@@ -13,7 +13,7 @@ type Abillity = {
 }
 
 export type Attack = {
-  cost: [string]
+  cost: string[]
   name: string
   text: string
   damage: string
@@ -39,27 +39,27 @@ type Price = {
 }
 
 type CardMarketPrice = {
-  averageSellPrice: number
-  lowPrice: number
-  trendPrice: number
-  germanProLow: number
-  suggestedPrice: number
-  reverseHoloSell: number
-  reverseHoloLow: number
-  reverseHoloTrend: number
-  lowPriceExPlus: number
-  avg1: number
-  avg7: number
-  avg30: number
-  reverseHoloAvg1: number
-  reverseHoloAvg7: number
-  reverseHoloAvg30: number
+  averageSellPrice?: number
+  lowPrice?: number
+  trendPrice?: number
+  germanProLow?: number
+  suggestedPrice?: number
+  reverseHoloSell?: number
+  reverseHoloLow?: number
+  reverseHoloTrend?: number
+  lowPriceExPlus?: number
+  avg1?: number
+  avg7?: number
+  avg30?: number
+  reverseHoloAvg1?: number
+  reverseHoloAvg7?: number
+  reverseHoloAvg30?: number
 }
 
 type TcgPlayer = {
   url: string
   updatedAt: string
-  prices: Price
+  prices?: Price
 }
 
 type CardMarket = {
@@ -76,11 +76,11 @@ export type PokeCard = {
   level: string
   hp: string
   types: string[]
-  evolvesFrom: string
-  evolvesTo: string[]
-  rules: string[]
-  AncientTrait: AncientTrait
-  abilities: Abillity[]
+  evolvesFrom?: string
+  evolvesTo?: string[]
+  rules?: string[]
+  AncientTrait?: AncientTrait
+  abilities?: Abillity[]
   attacks: Attack[]
   weaknesses: WeaknessOrResistances[]
   resistances: WeaknessOrResistances[]
@@ -90,10 +90,10 @@ export type PokeCard = {
   number: string
   artist: string
   rarity: string
-  flavorText: string
+  flavorText?: string
   nationalPokedexNumbers: number[]
   legalities: Legality
-  regulationMark: string
+  regulationMark?: string
   images: Image
   tcgplayer: TcgPlayer
   cardmarket: CardMarket
