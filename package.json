@@ -27,7 +27,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "react-scripts test",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand ",
+    "test:ci": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "commit": "git-cz"
   },
@@ -50,10 +51,12 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "commitizen": "^4.2.5",
     "craco-alias": "^3.0.1",
     "cz-conventional-changelog": "^3.3.0",
     "identity-obj-proxy": "^3.0.0",
+    "jest-environment-jsdom": "^29.0.3",
     "ts-jest": "^29.0.1"
   },
   "config": {
