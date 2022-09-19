@@ -32,7 +32,7 @@ const Input: React.FC<InputProps> = (props) => {
         },
       });
 
-      setCards(cards);
+      setCards(cards.data);
       swiper.slideTo(0);
     } catch (error) {
       console.log(error);
