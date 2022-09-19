@@ -8,6 +8,7 @@ module.exports = {
     "!<rootDir>/src/**/index.{ts,tsx}",
     "!<rootDir>/src/index.{ts,tsx}",
     "!<rootDir>/src/**/index.ts",
+    "!<rootDir>/src/infra/protocols/pokemonTcgApi/urls.ts",
     "!**/*.d.ts",
   ],
   coverageDirectory: "coverage",

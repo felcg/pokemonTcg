@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { CardsContext } from "@presentation/context/CardsContext";
 import { PokeCardService } from "@application/usecases";
 import { AxiosHttpClient } from "@infra/http";
-import { pokemonApi } from "@infra/protocols/pokemonTgcApi";
+import { pokemonApi } from "@infra/protocols/pokemonTcgApi";
 import { InputProps } from "@presentation/protocols";
 import "./styles.scss";
 
