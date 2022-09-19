@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { CardsContext } from "@presentation/context/CardsContext";
 import { PokeCardService } from "@application/usecases";
 import { AxiosHttpClient } from "@infra/http";
