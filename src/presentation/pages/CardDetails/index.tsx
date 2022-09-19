@@ -2,6 +2,7 @@ import { PokeCard } from "@domain/models";
 import { CardDetailsProps } from "@presentation/protocols";
 import { TypeColors, getColor } from "@presentation/utils";
 import { Link, useLocation } from "react-router-dom";
+import { AttackModal } from "./components";
 import "./styles.scss";
 
 const CardsDetails: React.FC<CardDetailsProps> = () => {
@@ -95,11 +96,7 @@ const CardsDetails: React.FC<CardDetailsProps> = () => {
         <div className="cardDetails__attacks">
           <strong>Attacks:</strong>
           {card?.attacks?.map((attack) => {
-            return (
-              <p key={attack.name} className="cardDetails__pill">
-                {attack.name}
-              </p>
-            );
+            return <AttackModal key={attack.name} attack={attack} />;
           })}
         </div>
       </div>

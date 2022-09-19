@@ -30,7 +30,9 @@
 
   &__attacks {
     .cardDetails__pill {
-     border: 1px solid $gray;
+      border: 1px solid $gray;
+      background: none;
+      cursor: pointer;
     }  
   }
 
