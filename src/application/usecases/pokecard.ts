@@ -1,6 +1,6 @@
 import { HttpClient, HttpStatusCode } from '@infra/protocols/http'
 import { IPokeCard } from '@domain/usecases'
-import { PokeCard, QueryParameters } from '@domain/models'
+import { GetCardsResponse, PokeCard, QueryParameters } from '@domain/models'
 
 export class PokeCardService implements IPokeCard {
   constructor(
@@ -24,7 +24,7 @@ export class PokeCardService implements IPokeCard {
     }
   }
 
-  async getCards({ params }: { params: QueryParameters }): Promise<PokeCard[]> {
+  async getCards({ params }: { params: QueryParameters }): Promise<GetCardsResponse> {
     const httpResponse = await this.httpClient.request({
       url: this.url,
       method: 'get',
@@ -32,7 +32,7 @@ export class PokeCardService implements IPokeCard {
     })
 
     switch (httpResponse.statusCode) {
-      case HttpStatusCode.ok: return httpResponse.body.data
+      case HttpStatusCode.ok: return httpResponse.body
       case HttpStatusCode.forbidden: throw new Error()
       default: throw new Error()
     }
